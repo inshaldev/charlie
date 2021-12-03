@@ -223,6 +223,7 @@ main {
     grid-row: 2/7;
   }
   .person-info {
+    border: 0;
     grid-row: 7/12;
     padding-bottom: 0;
   }
