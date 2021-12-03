@@ -230,7 +230,7 @@ main {
   }
   .person-info {
     border: 0;
-    grid-row: 6/11;
+    grid-row: 6/10;
     padding-bottom: 0;
   }
   .person-name {
@@ -239,9 +239,6 @@ main {
   .hire-btn {
     letter-spacing: 8px;
     width: 80%;
-  }
-  .scroll-text {
-    margin-bottom: 2rem;
   }
   .recent {
     display: none;
