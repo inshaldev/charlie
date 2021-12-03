@@ -176,7 +176,7 @@ main {
 #contact {
   background-color: chartreuse;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .navbar {
     background-color: #121212;
     bottom: 0;
@@ -212,7 +212,7 @@ main {
     visibility: hidden;
   }
 }
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 769px) {
   .navbar {
     display: none;
     visibility: hidden;
