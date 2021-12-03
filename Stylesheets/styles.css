@@ -215,7 +215,7 @@ main {
 @media only screen and (max-width: 768px) {
   #first-section {
     grid-template-columns: 0.25fr 2fr 0.25fr;
-    grid-template-rows: 2.5vh repeat(9, 10vh) 7.5vh;
+    grid-template-rows: 2.5vh repeat(9, 9.5vh) 7.5vh;
   }
   .person-picture {
     border: 1px solid #f5f5f5;
@@ -238,6 +238,12 @@ main {
     font-size: 2rem;
   }
   .recent {
+    display: none;
+    visibility: hidden;
+  }
+}
+@media only screen and (min-width: 769px) {
+  .scroll-text {
     display: none;
     visibility: hidden;
   }
