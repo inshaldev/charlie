@@ -170,14 +170,17 @@ main {
 .view-btn:active {
   transform: translate(-4px, -4px);
 }
-#about {
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: 1fr 1fr 1fr;
+#about,
+#portfolio,
+#contact {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
-.about-text {
-  grid-column: 1/11;
-  grid-row: 2;
+.about-heading,
+.portfolio-heading,
+.contact-heading {
+  width: 100%;
 }
 .top-text,
 .bottom-text {
