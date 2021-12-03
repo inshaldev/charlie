@@ -4,11 +4,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" href="./Stylesheets/styles.css" />
+    <link rel="stylesheet" href="./Stylesheets/about.css" />
     <title>Charlie Green</title>
   </head>
   <body>
     <main>
+      <ul class="navbar">
+        <a href="#about"><li>ABOUT ME</li></a>
+        <a href="#portfolio"><li>PORTFOLIO</li></a>
+        <a href="#contact"><li>CONTACT</li></a>
+      </ul>
       <section class="section">
         <img
           class="person-picture"
@@ -17,14 +27,15 @@
         />
         <div class="person-info">
           <h1 class="person-name">Charlie Green</h1>
-          <p>A photographer who loves nature, based in Turkey.</p>
-          <button class="hire-btn">HIRE</button>
+          <p>A nature photograper located in Turkey.</p>
+          <a
+            href="https://unsplash.com/@charliegreen998"
+            target="_blank"
+            class="hire-btn"
+            >CONTACT</a
+          >
         </div>
-        <ul class="navbar">
-          <li>PORTFOLIO</li>
-          <li>ABOUT ME</li>
-          <li>CONTACT</li>
-        </ul>
+        <p class="scroll-text"></p>
         <article class="recent">
           <h1 class="recent-heading">Recent</h1>
           <div class="img-grid">
@@ -33,9 +44,14 @@
             <img class="grid-img3" src="Images/dog1.jpg" />
             <img class="grid-img4" src="Images/dog2.jpg" />
           </div>
-          <button class="btn-inverse view-btn">VIEW MORE</button>
+          <a href="#portfolio" class="btn-inverse view-btn">VIEW MORE</a>
         </article>
       </section>
+      <section class="section" id="about">
+        <!-- <h1>About Me</h1> -->
+      </section>
+      <section class="section" id="portfolio"></section>
+      <section class="section" id="contact"></section>
     </main>
   </body>
 </html>
