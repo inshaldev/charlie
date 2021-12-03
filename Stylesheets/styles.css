@@ -74,6 +74,7 @@ main {
   margin-top: auto;
   font-weight: 800;
   padding: 1.25rem 0.625rem;
+  text-align: center;
 }
 .hire-btn:hover {
   background-color: #c5c5c5;
@@ -212,15 +213,20 @@ main {
   flex-grow: 2;
   margin-left: 20px;
 }
+.scroll-text {
+  margin-top: 0.5rem;
+  font-size: 2rem;
+}
 @media only screen and (max-width: 768px) {
   #first-section {
     grid-template-columns: 0.25fr 2fr 0.25fr;
-    grid-template-rows: 2.5vh repeat(9, 9.5vh) 7.5vh;
+    grid-template-rows: repeat(10, 10vh);
   }
   .person-picture {
     border: 1px solid #f5f5f5;
+    border-top: 0;
     grid-column: 2;
-    grid-row: 2/7;
+    grid-row: 1/7;
   }
   .person-info {
     border: 0;
@@ -232,10 +238,6 @@ main {
   }
   .hire-btn {
     width: 80%;
-  }
-  .scroll-text {
-    margin-top: 0.5rem;
-    font-size: 2rem;
   }
   .recent {
     display: none;
