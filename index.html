@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+    <script
+      src="https://kit.fontawesome.com/d33fe0dcde.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="./Stylesheets/styles.css" />
     <link rel="stylesheet" href="./Stylesheets/about.css" />
     <title>Charlie Green</title>
@@ -19,7 +19,7 @@
         <a href="#portfolio"><li>PORTFOLIO</li></a>
         <a href="#contact"><li>CONTACT</li></a>
       </ul> -->
-      <section class="section">
+      <section class="section" id="first-section">
         <img
           class="person-picture"
           alt="Photographer's Display Picture"
@@ -34,8 +34,8 @@
             class="hire-btn"
             >CONTACT</a
           >
+          <div class="scroll-text"><i class="fas fa-angle-down"></i></div>
         </div>
-        <p class="scroll-text"></p>
         <article class="recent">
           <h1 class="recent-heading">Recent</h1>
           <div class="img-grid">
@@ -47,11 +47,34 @@
           <a href="#portfolio" class="btn-inverse view-btn">VIEW MORE</a>
         </article>
       </section>
+
       <section class="section" id="about">
-        <!-- <h1>About Me</h1> -->
+        <h1 class="about-text">
+          <div class="top-text">
+            <div class="decor-spacer"></div>
+            <span class="decor">About</span>
+          </div>
+          <div class="bottom-text">
+            <div class="decor-spacer"></div>
+            <span class="decor">Me</span>
+          </div>
+        </h1>
       </section>
-      <section class="section" id="portfolio"></section>
-      <section class="section" id="contact"></section>
+
+      <section class="section" id="portfolio">
+        <h1 class="portfolio-text">
+          <div class="top-text">
+            <span class="decor-inverse">Portfolio</span>
+            <div class="decor-spacer-inverse"></div>
+          </div>
+        </h1>
+      </section>
+      <section class="section" id="contact">
+        <h1 class="contact-text">
+          <div class="top-text">
+            <div class="decor-spacer"></div>
+            <span class="decor">Contact</span>
+          </div></section>
     </main>
   </body>
 </html>

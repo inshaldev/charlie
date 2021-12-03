@@ -24,15 +24,17 @@ main {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
 }
+#first-section {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 10vh);
+}
 .section {
   background-color: #121212;
   min-height: 100vh;
   scroll-snap-align: start;
   overflow-y: hidden;
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(10, 10vh);
 }
 .person-picture {
   border-right: 1px solid var(--main);
@@ -66,7 +68,7 @@ main {
   color: #121212;
   outline: 0;
   font-size: 24px;
-  letter-spacing: 12px;
+  letter-spacing: 16px;
   width: 100%;
   transition: 0.1s all ease;
   margin-top: auto;
@@ -82,6 +84,7 @@ main {
 }
 .navbar {
   position: fixed;
+  top: 0;
   right: 0;
   left: 0;
   background-color: rgba(18, 18, 18, 0.25);
@@ -168,54 +171,70 @@ main {
   transform: translate(-4px, -4px);
 }
 #about {
-  background-color: crimson;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: 1fr 1fr 1fr;
 }
-#portfolio {
-  background-color: aqua;
+.about-text {
+  grid-column: 1/11;
+  grid-row: 2;
 }
-#contact {
-  background-color: chartreuse;
+.top-text,
+.bottom-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 100%;
+  margin: 0.75rem 0;
+}
+.decor {
+  line-height: 48px;
+  font-size: 4rem;
+  margin-right: 1.25rem;
+}
+.decor-inverse {
+  line-height: 48px;
+  font-size: 4rem;
+  margin-left: 1.25rem;
+}
+.decor-spacer {
+  border: 1px solid #444444;
+  border-left: 0;
+  flex-grow: 2;
+  margin-right: 20px;
+}
+.decor-spacer-inverse {
+  border: 1px solid #444444;
+  border-right: 0;
+  flex-grow: 2;
+  margin-left: 20px;
 }
 @media only screen and (max-width: 768px) {
-  .navbar {
-    background-color: #121212;
-    bottom: 0;
-    letter-spacing: 2px;
-    justify-content: space-between;
-    padding: 1rem 1.75rem;
-    width: 100vw;
-  }
-  .section {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(10, 10vh);
+  #first-section {
+    grid-template-columns: 0.25fr 2fr 0.25fr;
+    grid-template-rows: 2.5vh repeat(9, 10vh) 7.5vh;
   }
   .person-picture {
-    grid-row: 1/6;
+    border: 1px solid #f5f5f5;
+    grid-column: 2;
+    grid-row: 2/7;
   }
   .person-info {
-    grid-row: 6/10;
+    grid-row: 7/12;
+    padding-bottom: 0;
+  }
+  .person-name {
+    font-size: 2.65rem;
+  }
+  .hire-btn {
+    width: 80%;
   }
   .scroll-text {
-    font-size: 24px;
-    font-family: 'Open Sans', serif;
-    font-weight: 300;
-    letter-spacing: 1rem;
-    opacity: 25%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-column: 1;
-    grid-row: 10/11;
+    margin-top: 0.5rem;
+    font-size: 2rem;
   }
   .recent {
     display: none;
     visibility: hidden;
-  }
-}
-@media only screen and (min-width: 769px) {
-  .navbar {
-    display: none;
-    visibility: hidden;
-    top: 0;
   }
 }
