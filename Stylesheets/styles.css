@@ -19,12 +19,43 @@ a {
   color: inherit;
   text-align: center;
 }
-main {
+.top-text,
+.bottom-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 100%;
+  margin: 0.75rem 0;
+}
+.decor {
+  line-height: 48px;
+  font-size: 4rem;
+  margin-right: 1.25rem;
+}
+.decor-inverse {
+  line-height: 48px;
+  font-size: 4rem;
+  margin-left: 1.25rem;
+}
+.decor-spacer {
+  border: 1px solid #444444;
+  border-left: 0;
+  flex-grow: 2;
+  margin-right: 20px;
+}
+.decor-spacer-inverse {
+  border: 1px solid #444444;
+  border-right: 0;
+  flex-grow: 2;
+  margin-left: 20px;
+}
+/* main {
   height: 100vh;
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
-}
+} */
 #first-section {
+  border-bottom: 1px solid #f5f5f5;
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(10, 10vh);
@@ -32,8 +63,8 @@ main {
 .section {
   background-color: #121212;
   min-height: 100vh;
-  scroll-snap-align: start;
-  overflow-y: hidden;
+  /* scroll-snap-align: start;
+  overflow-y: hidden; */
   width: 100%;
 }
 .person-picture {
@@ -171,51 +202,17 @@ main {
 .view-btn:active {
   transform: translate(-4px, -4px);
 }
-#about,
-#portfolio,
 #contact {
   display: flex;
-  justify-content: flex-end;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
 }
+
 .about-heading,
 .portfolio-heading,
 .contact-heading {
   width: 100%;
-}
-.top-text,
-.bottom-text {
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-  width: 100%;
-  margin: 0.75rem 0;
-}
-.decor {
-  line-height: 48px;
-  font-size: 4rem;
-  margin-right: 1.25rem;
-}
-.decor-inverse {
-  line-height: 48px;
-  font-size: 4rem;
-  margin-left: 1.25rem;
-}
-.decor-spacer {
-  border: 1px solid #444444;
-  border-left: 0;
-  flex-grow: 2;
-  margin-right: 20px;
-}
-.decor-spacer-inverse {
-  border: 1px solid #444444;
-  border-right: 0;
-  flex-grow: 2;
-  margin-left: 20px;
-}
-.scroll-text {
-  margin-top: 0.5rem;
-  font-size: 2rem;
 }
 @media only screen and (max-width: 768px) {
   #first-section {
@@ -232,6 +229,17 @@ main {
     border: 0;
     grid-row: 6/10;
     padding-bottom: 0;
+  }
+  .scroll-text {
+    letter-spacing: 16px;
+    opacity: 10%;
+    font-size: 2rem;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 2;
+    grid-row: 10;
   }
   .person-name {
     font-size: 2.65rem;
